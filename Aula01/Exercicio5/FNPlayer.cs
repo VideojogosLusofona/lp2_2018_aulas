@@ -1,4 +1,4 @@
-﻿namespace Exercicio4
+﻿namespace Exercicio5
 {
     /// <summary>
     /// Class that represents a Fortnite player.
@@ -8,19 +8,19 @@
 
         /// <summary>
         /// The player's health.
-        /// This is an instance variable and as such, it should no be public.
+        /// In this exercise we made this variable private, as it should be.
         /// </summary>
-        public float health;
+        private float health;
 
         /// <summary>
         /// The player's weapon.
-        /// This is an instance variable and as such, it should no be public.
+        /// In this exercise we made this variable private, as it should be.
         /// </summary>
-        public string weapon;
+        private string weapon;
 
         /// <summary>
         /// Is the player alive?
-        /// This is an instance variable and as such, it should no be public.
+        /// In this exercise we made this variable private, as it should be.
         /// </summary>
         public bool alive;
 
@@ -43,6 +43,32 @@
         /// <param name="weapon">Initial player weapon.</param>
         public FNPlayer(float health, string weapon)
         {
+            // We now use the setter method to set the player's health instead
+            // of doing it directly
+            SetHealth(health);
+
+            // Set initial weapon
+            this.weapon = weapon;
+
+            // The 'this' keyword differentiates between the instance
+            // variables and the local variables/parameters
+        }
+
+        /// <summary>
+        /// Getter method which returns the player's health.
+        /// </summary>
+        /// <returns>The player's health.</returns>
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        /// <summary>
+        /// Setter method which sets the player's health.
+        /// </summary>
+        /// <param name="health">The health to set in the player.</param>
+        public void SetHealth(float health)
+        {
             if (health <= 0)
             {
                 // If health is zero or less, player is set as dead
@@ -53,14 +79,9 @@
                 // Set initial health (if it is not zero or less)
                 this.health = health;
             }
-
-            // Set initial weapon
-            this.weapon = weapon;
-
-            // The 'this' keyword differentiates between the instance
-            // variables and the local variables/parameters
+            // 'this.health' refers to the instance variable
+            // 'health' refers to the local variable/method parameter
         }
-
 
         /// <summary>
         /// Attack an enemy.

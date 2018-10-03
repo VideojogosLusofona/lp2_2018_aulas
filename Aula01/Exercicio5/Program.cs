@@ -2,7 +2,7 @@
 using System;
 
 // Namespaces are a way to organize our classes
-namespace Exercicio4
+namespace Exercicio5
 {
     /// <summary>
     /// The Program class is the default class when we create a new Visual
@@ -30,12 +30,25 @@ namespace Exercicio4
             // Let's make player1 attack player2, and check player2's health
             // before and after the attack
             Console.WriteLine("Player 2 health before attack: "
-                + player2.health);
+                + player2.GetHealth());
+            // Notice we now use the instance's GetHealth() method to obtain
+            // the player's health instead of directly accessing the player's
+            // health instance variable
 
             player1.Attack(player2);
 
             Console.WriteLine("Player 2 health after attack: "
-                + player2.health);
+                + player2.GetHealth());
+
+            // Change player1 health using the respective setter method,
+            // checking player1's health before and after the change
+            Console.WriteLine("Player 1 health before change: "
+                + player1.GetHealth());
+
+            player1.SetHealth(24);
+
+            Console.WriteLine("Player 1 health after change: "
+                + player1.GetHealth());
 
         }
     }
