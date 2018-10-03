@@ -1,4 +1,4 @@
-﻿namespace Exercicio3
+﻿namespace Exercicio4
 {
     /// <summary>
     /// Class that represents a Fortnite player.
@@ -23,6 +23,44 @@
         /// This is an instance variable and as such, it should no be public.
         /// </summary>
         public bool alive;
+
+        /// <summary>
+        /// Empty constructor, will initialize all instance variables to
+        /// adequate defaults.
+        /// </summary>
+        public FNPlayer()
+        {
+            health = 100;
+            weapon = "Pickaxe";
+            alive = true;
+        }
+
+        /// <summary>
+        /// This constructor initializes player health and weapon with values
+        /// specified by the code who creates a new player instance.
+        /// </summary>
+        /// <param name="health">Initial player health.</param>
+        /// <param name="weapon">Initial player weapon.</param>
+        public FNPlayer(float health, string weapon)
+        {
+            if (health <= 0)
+            {
+                // If health is zero or less, player is set has dead
+                Die();
+            }
+            else
+            {
+                // Set initial health (if it is not zero or less)
+                this.health = health;
+            }
+
+            // Set initial weapon
+            this.weapon = weapon;
+
+            // The 'this' keyword differentiates between the instance
+            // variables and the local variables/parameters
+        }
+
 
         /// <summary>
         /// Attack an enemy.
