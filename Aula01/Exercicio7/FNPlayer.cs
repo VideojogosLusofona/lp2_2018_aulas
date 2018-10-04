@@ -13,6 +13,18 @@
         public static float MaxHealth { get; set; } = 100;
 
         /// <summary>
+        /// The player's weapon.
+        /// In this exercise we made this variable private, as it should be.
+        /// </summary>
+        private string weapon;
+
+        /// <summary>
+        /// Is the player alive?
+        /// In this exercise we made this variable private, as it should be.
+        /// </summary>
+        private bool alive;
+
+        /// <summary>
         /// The player's health.
         /// It's a private instance variable which supports the public Health
         /// property.
@@ -52,18 +64,6 @@
                 }
             }
         }
-
-        /// <summary>
-        /// The player's weapon.
-        /// In this exercise we made this variable private, as it should be.
-        /// </summary>
-        private string weapon;
-
-        /// <summary>
-        /// Is the player alive?
-        /// In this exercise we made this variable private, as it should be.
-        /// </summary>
-        public bool alive;
 
         /// <summary>
         /// Empty constructor, will initialize all instance variables to

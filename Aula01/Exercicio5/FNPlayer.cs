@@ -7,12 +7,6 @@
     {
 
         /// <summary>
-        /// The player's health.
-        /// In this exercise we made this variable private, as it should be.
-        /// </summary>
-        private float health;
-
-        /// <summary>
         /// The player's weapon.
         /// In this exercise we made this variable private, as it should be.
         /// </summary>
@@ -22,7 +16,13 @@
         /// Is the player alive?
         /// In this exercise we made this variable private, as it should be.
         /// </summary>
-        public bool alive;
+        private bool alive;
+
+        /// <summary>
+        /// The player's health.
+        /// In this exercise we made this variable private, as it should be.
+        /// </summary>
+        private float health;
 
         /// <summary>
         /// Empty constructor, will initialize all instance variables to

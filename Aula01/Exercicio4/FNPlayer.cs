@@ -7,22 +7,22 @@
     {
 
         /// <summary>
-        /// The player's health.
-        /// This is an instance variable and as such, it should no be public.
-        /// </summary>
-        public float health;
-
-        /// <summary>
         /// The player's weapon.
-        /// This is an instance variable and as such, it should no be public.
+        /// This is an instance variable and as such, it should not be public.
         /// </summary>
         public string weapon;
 
         /// <summary>
         /// Is the player alive?
-        /// This is an instance variable and as such, it should no be public.
+        /// This is an instance variable and as such, it should not be public.
         /// </summary>
         public bool alive;
+
+        /// <summary>
+        /// The player's health.
+        /// This is an instance variable and as such, it should not be public.
+        /// </summary>
+        public float health;
 
         /// <summary>
         /// Empty constructor, will initialize all instance variables to
