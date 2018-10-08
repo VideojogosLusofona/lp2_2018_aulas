@@ -1,4 +1,4 @@
-﻿namespace Aula08
+﻿namespace Aula02
 {
     public class PlayerClass
     {

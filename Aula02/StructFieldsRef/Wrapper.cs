@@ -1,7 +1,8 @@
-﻿namespace Aula08
+﻿namespace Aula02
 {
     public struct Wrapper
     {
-        public int[] nums;
+        internal int[] nums;
+        internal int someValue;
     }
 }
