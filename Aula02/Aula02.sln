@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassVsStruct", "ClassVsStruct\ClassVsStruct.csproj", "{BB6895FF-D2C2-4A9C-AFA7-CD3D8AD38839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructWithRef", "StructFieldsRef\StructWithRef.csproj", "{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB6895FF-D2C2-4A9C-AFA7-CD3D8AD38839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6895FF-D2C2-4A9C-AFA7-CD3D8AD38839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB6895FF-D2C2-4A9C-AFA7-CD3D8AD38839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6895FF-D2C2-4A9C-AFA7-CD3D8AD38839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C622426-C3ED-474C-B8E7-BFCFB15E76E5}
+	EndGlobalSection
+EndGlobal
