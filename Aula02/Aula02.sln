@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassVsStruct", "ClassVsStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructWithRef", "StructFieldsRef\StructWithRef.csproj", "{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuplesTest", "TuplesTest\TuplesTest.csproj", "{2B0E5319-6C80-450F-A770-229FA34964D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +23,10 @@ Global
 		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{690CDEDC-BCA4-43C1-8889-6747C6EFDCE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A0EED6A-545F-4EDF-A87E-DE20B3A18950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B0E5319-6C80-450F-A770-229FA34964D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0E5319-6C80-450F-A770-229FA34964D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0E5319-6C80-450F-A770-229FA34964D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0E5319-6C80-450F-A770-229FA34964D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
