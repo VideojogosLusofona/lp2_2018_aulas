@@ -6,6 +6,10 @@
     /// </summary>
     public class Berserker : FNPlayer
     {
+        /// <summary>
+        /// The damage caused by the berserker.
+        /// </summary>
+        public const int damage = 20;
 
         /// <summary>
         /// A property representing the player's health.
@@ -59,8 +63,17 @@
         /// <param name="enemy">Enemy to attack.</param>
         public override void Attack(FNPlayer enemy)
         {
-            // Berserker causes 20 damage
-            enemy.TakeDamage(20);
+            // Berserker causes causes the damage specified in the constant
+            enemy.TakeDamage(damage);
+        }
+
+        /// <summary>
+        /// Return a string with information about the demolitionist player.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"{base.ToString()}, Damage is {damage}";
         }
     }
 }

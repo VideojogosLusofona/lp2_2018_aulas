@@ -124,7 +124,7 @@
         public override string ToString()
         {
             return string.Format(
-                "{0} is {1} => Health is {2} and Weapon is {3}",
+                "{0} is {1} => Health is {2}, Weapon is {3}",
                 GetType().Name,
                 Alive ? "alive" : "dead",
                 Health,

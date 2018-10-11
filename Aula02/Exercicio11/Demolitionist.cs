@@ -5,6 +5,10 @@
     /// </summary>
     public class Demolitionist : FNPlayer
     {
+        /// <summary>
+        /// The damage caused by the demolitionist.
+        /// </summary>
+        public const int damage = 40;
 
         /// <summary>
         /// This constructor initializes player health with values
@@ -23,8 +27,17 @@
         /// <param name="enemy">Enemy to attack.</param>
         public override void Attack(FNPlayer enemy)
         {
-            // Demolitionist causes 40 damage
-            enemy.TakeDamage(40);
+            // Demolitionist causes the damage specified in the constant
+            enemy.TakeDamage(damage);
+        }
+
+        /// <summary>
+        /// Return a string with information about the demolitionist player.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return $"{base.ToString()}, Damage is {damage}";
         }
     }
 }
