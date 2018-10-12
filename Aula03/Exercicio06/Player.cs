@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Exercicio03
+namespace Exercicio06
 {
     /// <summary>
     /// Class which represents a player, which has a name and a score.
     /// </summary>
-    public class Player : IHasScore
+    public class Player : IHasScore, IComparable<Player>
     {
         /// <summary>
         /// Instance variable that contains the actual score and supports the
@@ -56,6 +56,27 @@ namespace Exercicio03
         {
             if (other == null) return false;
             return Score == other.Score;
+        }
+
+        /// <summary>
+        /// This method compares two players according to the
+        /// <see cref="IComparable{T}"/> interface. Players with a higher
+        /// score come before players with a lower score.
+        /// </summary>
+        /// <param name="other">
+        /// The player which will be compared to the current one.
+        /// </param>
+        /// <returns>
+        /// A value that indicates the relative order of the objects being
+        /// compared. If less than zero, the current player comes before
+        /// <paramref name="other"/>; if zero, both players are in the same
+        /// position; if greater than zero, the current player comes after
+        /// <paramref name="other"/>.
+        /// </returns>
+        public int CompareTo(Player other)
+        {
+            if (other == null) return 0;
+            return other.Score - Score;
         }
 
         /// <summary>
