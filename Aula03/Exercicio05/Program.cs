@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Exercicio06
+namespace Exercicio05
 {
     /// <summary>
     /// Test how to sort stuff in a collection.

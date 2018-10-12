@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Exercicio04
 {
     /// <summary>
-    /// Test how to sort stuff in a collection.
+    /// Test an iterable method.
     /// </summary>
     public class Program
     {

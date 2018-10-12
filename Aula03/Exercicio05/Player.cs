@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercicio06
+namespace Exercicio05
 {
     /// <summary>
     /// Class which represents a player, which has a name and a score.

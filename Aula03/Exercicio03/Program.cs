@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Exercicio03
 {
     /// <summary>
-    /// Test how to sort stuff in a collection.
+    /// Test a collection of players.
     /// </summary>
     public class Program
     {

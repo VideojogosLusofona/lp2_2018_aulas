@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercicio06
+namespace Exercicio05
 {
     /// <summary>
     /// This interface defines a type of object that has a score.
