@@ -33,6 +33,9 @@ namespace Exercicio06
                     case "l": // List players option
                         ListPlayers(players);
                         break;
+                    case "s": // Show players with score greater than
+                        ShowPlayersWithScoreGreaterThan(players);
+                        break;
                     case "q": // Quit
                         break;
                     default: // Unknown option
@@ -53,7 +56,8 @@ namespace Exercicio06
             // Show menu
             Console.WriteLine("------------------");
             Console.WriteLine("(I)nsert player");
-            Console.WriteLine("(L)ist players");
+            Console.WriteLine("(L)ist all players");
+            Console.WriteLine("(S)how players with score greater than x");
             Console.WriteLine("(Q)uit");
             Console.WriteLine("------------------");
             // Ask and return player option, removing whitespace before and
@@ -62,7 +66,7 @@ namespace Exercicio06
         }
 
         /// <summary>
-        /// Insert a player in the list.
+        /// Insert a player in the list and then sort the list by score.
         /// </summary>
         /// <param name="players">The list of players.</param>
         private static void InsertPlayer(List<Player> players)
@@ -97,6 +101,10 @@ namespace Exercicio06
 
             // Add player to list
             players.Add(player);
+
+            // Sort players by score
+            players.Sort();
+
         }
 
         /// <summary>
@@ -105,9 +113,6 @@ namespace Exercicio06
         /// <param name="players">The players list.</param>
         private static void ListPlayers(List<Player> players)
         {
-            // Sort players
-            players.Sort();
-
             // Show player list
             Console.WriteLine("==== Player List ====");
             foreach (Player player in players)
@@ -116,6 +121,71 @@ namespace Exercicio06
                 Console.WriteLine(player);
             }
             Console.WriteLine("=====================");
+        }
+
+        /// <summary>
+        /// Show player with score greater than a user-specified value.
+        /// Players are sorted by score.
+        /// </summary>
+        /// <param name="players">List of players.</param>
+        private static void
+        ShowPlayersWithScoreGreaterThan(List<Player> players)
+        {
+            // Required local variables
+            int minScore;
+
+            Console.Write("Minimum player score : ");
+
+            // Get minimum player score, must be valid integer
+            // In this case we don't verify this, so if user inserts invalid
+            // integer, program will crash
+            minScore = Convert.ToInt32(Console.ReadLine());
+
+            // Show players with at least this score
+            Console.WriteLine("=== Players with score > {0} ===", minScore);
+            foreach (Player player in
+                GetPlayersWithScoreGreaterThan(players, minScore))
+            {
+                // We're using the Player.ToString() method to show player info
+                Console.WriteLine(player);
+            }
+            Console.WriteLine("================================");
+
+        }
+
+        /// <summary>
+        /// Get an enumerable containing players with score greater than the
+        /// specified parameter <paramref name="minScore"/>.
+        /// </summary>
+        /// <param name="players">The list of all players.</param>
+        /// <param name="minScore">
+        /// The minimum score a player should have to be returned.
+        /// </param>
+        /// <returns>
+        /// An enumerable containing players with score greater than the
+        /// specified parameter <paramref name="minScore"/>.
+        /// </returns>
+        private static IEnumerable<Player>
+        GetPlayersWithScoreGreaterThan(List<Player> players, int minScore)
+        {
+            // Cycle through all players
+            foreach (Player player in players)
+            {
+                // Does the current player have a score greater than minScore?
+                if (player.Score > minScore)
+                {
+                    // If so, return it
+                    yield return player;
+                    // No need to create an entire collection to do this
+                }
+                else
+                {
+                    // Since the player list is now sorted by score, we can
+                    // break out of the loop if the current player no longer
+                    // has the minimum required score
+                    break;
+                }
+            }
         }
     }
 }
