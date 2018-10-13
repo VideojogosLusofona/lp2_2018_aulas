@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Exercicio05
+﻿namespace Exercicio08
 {
     /// <summary>
     /// Class which represents a player, which has a name and a score.
     /// </summary>
-    public class Player : IHasScore, IComparable<Player>
+    public class Player : IHasScore
     {
         /// <summary>
         /// Instance variable that contains the actual score and supports the
@@ -44,9 +42,7 @@ namespace Exercicio05
 
         /// <summary>
         /// This method returns true if another instance of type IHasScore
-        /// contains the same score as the current instance. This method is
-        /// required because Player implements <c>IEquatable</c> (via
-        /// <see cref="IHasScore"/>).
+        /// contains the same score as the current instance.
         /// </summary>
         /// <param name="other">
         /// An instance of a class that implements the IHasScore interface.
@@ -56,36 +52,6 @@ namespace Exercicio05
         {
             if (other == null) return false;
             return Score == other.Score;
-        }
-
-        /// <summary>
-        /// This method compares two players according to the
-        /// <see cref="IComparable{T}"/> interface. Players with a higher
-        /// score come before players with a lower score.
-        /// </summary>
-        /// <param name="other">
-        /// The player which will be compared to the current one.
-        /// </param>
-        /// <returns>
-        /// A value that indicates the relative order of the objects being
-        /// compared. If less than zero, the current player comes before
-        /// <paramref name="other"/>; if zero, both players are in the same
-        /// position; if greater than zero, the current player comes after
-        /// <paramref name="other"/>.
-        /// </returns>
-        public int CompareTo(Player other)
-        {
-            if (other == null) return -1;
-            return other.Score - Score;
-        }
-
-        /// <summary>
-        /// This method overrides <see cref="object.ToString()"/>.
-        /// </summary>
-        /// <returns>A string representing the player state.</returns>
-        public override string ToString()
-        {
-            return $"My name is {Name} and my score is {Score}";
         }
     }
 }
