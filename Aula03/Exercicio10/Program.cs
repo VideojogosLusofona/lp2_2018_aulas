@@ -3,7 +3,8 @@
 namespace Exercicio10
 {
     /// <summary>
-    /// This program tests our generic class.
+    /// This program tests our generic class, now making use of the
+    /// <see cref="Player.ToString()"/> override.
     /// </summary>
     public class Program
     {
