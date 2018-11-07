@@ -33,7 +33,7 @@ namespace Exercicio6
             shotGun = new GunClip(shotGun, 2);
 
             // Fire the decorated shotgun and see how it renders
-            Console.WriteLine("n=== Shotgun ===");
+            Console.WriteLine("=== Shotgun ===");
             shotGun.Fire();
             Console.WriteLine(shotGun.GetRender());
             Console.WriteLine();
