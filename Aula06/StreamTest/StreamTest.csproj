@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{974F9F36-EACC-4A9C-9D6B-6ABEF79B5AD2}</ProjectGuid>
+    <ProjectGuid>{75E73B15-6B50-4FD5-808A-0E542AC04F7F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AdapterTest</RootNamespace>
-    <AssemblyName>AdapterTest</AssemblyName>
+    <RootNamespace>StreamTest</RootNamespace>
+    <AssemblyName>StreamTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GermanShepherd.cs" />
-    <Compile Include="GrayWolf.cs" />
-    <Compile Include="IBear.cs" />
-    <Compile Include="IDog.cs" />
-    <Compile Include="IWolf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WolfAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
