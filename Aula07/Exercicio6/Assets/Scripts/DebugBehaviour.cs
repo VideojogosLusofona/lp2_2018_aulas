@@ -35,6 +35,7 @@ public class DebugBehaviour : MonoBehaviour
     {
         target.TargetHit -= DebugTargetHit;
         player.ScoreUpdated -= DebugScoreUpdated;
+        player.HitWall -= DebugHitWall;
     }
 
     // Log that the target was hit
