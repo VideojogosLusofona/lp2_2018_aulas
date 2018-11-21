@@ -5,6 +5,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+# Do not ignore *.meta files
+!*.meta
+
 # Visual Studio cache directory
 .vs/
 .vscode/
