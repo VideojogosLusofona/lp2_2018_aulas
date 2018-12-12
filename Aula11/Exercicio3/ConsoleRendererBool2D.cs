@@ -9,7 +9,7 @@ namespace Exercicio3
     public class ConsoleRendererBool2D : IRendererBool2D
     {
         // Caracteres a imprimir para mostrar células vivas e mortas
-        private char alive, dead;
+        private readonly char alive, dead;
 
         // Construtor
         public ConsoleRendererBool2D(char alive, char dead)
@@ -47,11 +47,11 @@ namespace Exercicio3
                 Environment.NewLine.Length * worldToRender.YDim);
 
             // Construir a string contendo o mundo
-            for (int i = 0; i < worldToRender.YDim; i++)
+            for (int y = 0; y < worldToRender.YDim; y++)
             {
-                for (int j = 0; j < worldToRender.XDim; j++)
+                for (int x = 0; x < worldToRender.XDim; x++)
                 {
-                    sb.Append(worldToRender[j, i] ? alive : dead);
+                    sb.Append(worldToRender[x, y] ? alive : dead);
                 }
                 sb.Append(Environment.NewLine);
             }
