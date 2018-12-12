@@ -118,7 +118,7 @@ namespace Exercicio3
                     int xFinal = x < 0 ? simWorld.XDim - 1
                         : (x >= simWorld.XDim ? 0 : x);
 
-                    // Obter coordenada x yinal do vizinho atual tendo em conta
+                    // Obter coordenada y final do vizinho atual tendo em conta
                     // um mundo toroidal (que dá a volta)
                     int yFinal = y < 0 ? simWorld.YDim - 1
                         : (y >= simWorld.YDim ? 0 : y);
