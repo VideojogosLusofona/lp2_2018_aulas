@@ -31,7 +31,8 @@ namespace Exercicio3
             // mundo de simulação (não suportado em Linux e Mac)
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                Console.SetWindowSize(worldToRender.XDim, worldToRender.YDim);
+                Console.SetWindowSize(
+                    worldToRender.XDim, worldToRender.YDim + 2);
             }
         }
 
